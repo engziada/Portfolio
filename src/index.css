@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-50: 239 246 255;
+    --color-primary-100: 219 234 254;
+    --color-primary-200: 191 219 254;
+    --color-primary-300: 147 197 253;
+    --color-primary-400: 96 165 250;
+    --color-primary-500: 59 130 246;
+    --color-primary-600: 37 99 235;
+    --color-primary-700: 29 78 216;
+    --color-primary-800: 30 64 175;
+    --color-primary-900: 30 58 138;
+    --color-primary-950: 23 37 84;
+    
+    --color-secondary-50: 240 253 250;
+    --color-secondary-100: 204 251 241;
+    --color-secondary-200: 153 246 228;
+    --color-secondary-300: 94 234 212;
+    --color-secondary-400: 45 212 191;
+    --color-secondary-500: 20 184 166;
+    --color-secondary-600: 13 148 136;
+    --color-secondary-700: 15 118 110;
+    --color-secondary-800: 17 94 89;
+    --color-secondary-900: 19 78 74;
+    --color-secondary-950: 4 47 46;
+    
+    --color-accent-50: 255 247 237;
+    --color-accent-100: 255 237 213;
+    --color-accent-200: 254 215 170;
+    --color-accent-300: 253 186 116;
+    --color-accent-400: 251 146 60;
+    --color-accent-500: 249 115 22;
+    --color-accent-600: 234 88 12;
+    --color-accent-700: 194 65 12;
+    --color-accent-800: 154 52 18;
+    --color-accent-900: 124 45 18;
+    --color-accent-950: 67 20 7;
+    
+    --color-success-50: 240 253 244;
+    --color-success-500: 34 197 94;
+    --color-success-950: 5 46 22;
+    
+    --color-warning-50: 255 251 235;
+    --color-warning-500: 234 179 8;
+    --color-warning-950: 66 32 6;
+    
+    --color-error-50: 254 242 242;
+    --color-error-500: 239 68 68;
+    --color-error-950: 69 10 10;
+
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    --cursor-size: 32px;
+    --curve-factor: 32px;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-50 overflow-x-hidden;
+    cursor: none;
+  }
+
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      cursor: auto;
+    }
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-[1920px] mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24;
+  }
+  
+  .section-container {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 lg:mb-16;
+    line-height: 1.1;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400;
+  }
+  
+  .outline-text {
+    -webkit-text-stroke: 1px theme('colors.zinc.200');
+    color: transparent;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-zinc-200 hover:border-primary-400 hover:text-primary-400;
+  }
+  
+  .custom-shape {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  }
+
+  .blob-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  
+  /* For RTL layout */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+
+  /* Timeline Design */
+  .timeline-item {
+    @apply relative pl-10 mb-12 last:mb-0;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-0 top-0 w-1 h-full bg-primary-500 rounded-full;
+  }
+  
+  .timeline-dot {
+    @apply absolute left-[-8px] top-1 w-4 h-4 rounded-full bg-secondary-400 border-4 border-zinc-900;
+    z-index: 1;
+  }
+  
+  .rtl .timeline-item {
+    @apply pl-0 pr-10;
+  }
+  
+  .rtl .timeline-item::before {
+    @apply left-auto right-0;
+  }
+  
+  .rtl .timeline-dot {
+    @apply left-auto right-[-8px];
+  }
+  
+  /* Custom cursor */
+  .custom-cursor {
+    @apply fixed top-0 left-0 pointer-events-none z-50 rounded-full mix-blend-difference;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Curved sections */
+  .curved-section {
+    @apply relative;
+  }
+  
+  .curved-section::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-[var(--curve-factor)] bg-current;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    transform: translateY(-98%);
+  }
+
+  /* Loading animations */
+  .loaded .fade-up {
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Skill pill */
+  .skill-pill {
+    @apply px-4 py-2 rounded-full inline-flex items-center justify-center text-sm font-medium;
+  }
+}
