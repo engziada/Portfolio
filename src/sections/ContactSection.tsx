@@ -72,7 +72,7 @@ const ContactSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-2"
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -83,42 +83,42 @@ const ContactSection: React.FC = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-6 gradient-text">Let's Connect</h3>
                 <p className="text-zinc-400 mb-8">Feel free to reach out for collaborations, questions, or just to say hello!</p>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <Mail className="text-primary-400 mt-1 flex-shrink-0 mr-4" size={20} />
                     <div>
                       <h4 className="text-zinc-200 font-medium">Email</h4>
-                      <p className="text-zinc-400">hello@example.com</p>
+                      <p className="text-zinc-400">{t('contact.email')}</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <MapPin className="text-primary-400 mt-1 flex-shrink-0 mr-4" size={20} />
                     <div>
                       <h4 className="text-zinc-200 font-medium">Location</h4>
-                      <p className="text-zinc-400">New York, NY</p>
+                      <p className="text-zinc-400">{t('contact.location')}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-12 pt-6 border-t border-zinc-700/50">
-                <h4 className="text-zinc-200 font-medium mb-3">Available for freelance projects</h4>
-                <p className="text-zinc-400">Currently accepting new clients for Q3 2025</p>
+                <h4 className="text-zinc-200 font-medium mb-3">{t('contact.availability')}</h4>
+                <p className="text-zinc-400">{t('contact.phone')}</p>
               </div>
             </div>
           </motion.div>
-          
+
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-3"
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
             {formStatus === 'success' ? (
-              <motion.div 
+              <motion.div
                 className="flex flex-col items-center justify-center h-full bg-zinc-800/50 backdrop-blur-sm rounded-xl p-12 border border-green-500/30"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -129,7 +129,7 @@ const ContactSection: React.FC = () => {
                 <p className="text-zinc-300 text-center">I'll get back to you as soon as possible!</p>
               </motion.div>
             ) : formStatus === 'error' ? (
-              <motion.div 
+              <motion.div
                 className="flex flex-col items-center justify-center h-full bg-zinc-800/50 backdrop-blur-sm rounded-xl p-12 border border-red-500/30"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -138,8 +138,8 @@ const ContactSection: React.FC = () => {
                 <AlertCircle className="text-red-500 mb-6" size={64} />
                 <h3 className="text-2xl font-bold mb-4 text-red-400">{t('contact.error')}</h3>
                 <p className="text-zinc-300 text-center">Please try again or contact me directly via email.</p>
-                <button 
-                  onClick={() => setFormStatus('idle')} 
+                <button
+                  onClick={() => setFormStatus('idle')}
                   className="mt-6 btn btn-outline"
                 >
                   Try Again
@@ -161,7 +161,7 @@ const ContactSection: React.FC = () => {
                     className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-zinc-200"
                   />
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
                     {t('contact.emailLabel')}
@@ -176,7 +176,7 @@ const ContactSection: React.FC = () => {
                     className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-zinc-200"
                   />
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">
                     {t('contact.messageLabel')}
@@ -191,7 +191,7 @@ const ContactSection: React.FC = () => {
                     className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-zinc-200 resize-none"
                   ></textarea>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <button
                     type="submit"

@@ -15,32 +15,32 @@ const SkillsSection: React.FC = () => {
     target: sectionRef,
     offset: ["start end", "end start"]
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   const skillCategories = [
     {
-      id: 'frontend',
-      title: t('skills.frontend.title'),
-      skills: t('skills.frontend.skills', { returnObjects: true }) as string[],
+      id: 'programming',
+      title: t('skills.programming.title'),
+      skills: t('skills.programming.skills', { returnObjects: true }) as string[],
       color: 'from-blue-500 to-indigo-500',
     },
     {
-      id: 'backend',
-      title: t('skills.backend.title'),
-      skills: t('skills.backend.skills', { returnObjects: true }) as string[],
+      id: 'database',
+      title: t('skills.database.title'),
+      skills: t('skills.database.skills', { returnObjects: true }) as string[],
       color: 'from-teal-500 to-emerald-500',
     },
     {
-      id: 'design',
-      title: t('skills.design.title'),
-      skills: t('skills.design.skills', { returnObjects: true }) as string[],
+      id: 'networking',
+      title: t('skills.networking.title'),
+      skills: t('skills.networking.skills', { returnObjects: true }) as string[],
       color: 'from-purple-500 to-pink-500',
     },
     {
-      id: 'tools',
-      title: t('skills.tools.title'),
-      skills: t('skills.tools.skills', { returnObjects: true }) as string[],
+      id: 'leadership',
+      title: t('skills.leadership.title'),
+      skills: t('skills.leadership.skills', { returnObjects: true }) as string[],
       color: 'from-amber-500 to-orange-500',
     },
   ];
@@ -66,16 +66,16 @@ const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section 
-      id="skills" 
-      ref={sectionRef} 
+    <section
+      id="skills"
+      ref={sectionRef}
       className="section-container relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary-900/30 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-secondary-900/30 rounded-full blur-3xl opacity-60"></div>
-      
-      <motion.div 
+
+      <motion.div
         className="max-w-5xl mx-auto relative z-10"
         style={{ y }}
       >
@@ -84,7 +84,7 @@ const SkillsSection: React.FC = () => {
           <p className="text-xl text-zinc-400">{t('skills.subtitle')}</p>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           ref={ref}
           variants={containerVariants}
@@ -96,7 +96,7 @@ const SkillsSection: React.FC = () => {
               key={category.id}
               className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50 hover:border-primary-500/50 transition-all duration-300"
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { duration: 0.3 }
               }}
@@ -111,7 +111,7 @@ const SkillsSection: React.FC = () => {
                     className={`skill-pill bg-gradient-to-r ${category.color} bg-opacity-10 text-white`}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ 
+                    transition={{
                       duration: 0.3,
                       delay: index * 0.05,
                       ease: "easeOut"

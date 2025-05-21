@@ -12,18 +12,18 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#" className="text-2xl font-bold gradient-text">
-              Portfolio
+              Muhammad Ziada
             </a>
             <p className="text-zinc-400 mt-2">{t('footer.designed')}</p>
           </div>
-          
+
           <div className="text-center md:text-right">
             <p className="text-zinc-400 mb-4">{t('footer.followMe')}</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-zinc-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
+              <a href="https://github.com/engziada" className="text-zinc-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
                 <Github size={24} />
               </a>
-              <a href="#" className="text-zinc-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+              <a href={t('footer.linkedin')} className="text-zinc-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={24} />
               </a>
               <a href="#" className="text-zinc-400 hover:text-primary-400 transition-colors" aria-label="Twitter">
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-6 border-t border-zinc-800 text-center md:text-left">
           <p className="text-zinc-500">{t('footer.copyright')}</p>
         </div>

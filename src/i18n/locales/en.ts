@@ -8,9 +8,9 @@ export default {
     contact: 'Contact',
   },
   hero: {
-    greeting: 'Hello, I am',
-    tagline: 'I build exceptional digital experiences',
-    description: 'A passionate developer focused on creating innovative and user-centric digital solutions with attention to detail and performance.',
+    greeting: 'Hello, I am Muhammad Ziada',
+    tagline: 'IT & Network Engineering Leader',
+    description: 'Seasoned IT and Network Engineering leader with over 18 years of experience in driving innovation, business continuity, and crisis management across large-scale, mission-critical projects.',
     cta: 'View My Work',
     secondaryCta: 'Get In Touch',
   },
@@ -18,45 +18,69 @@ export default {
     title: 'Professional Journey',
     subtitle: 'My career path and achievements',
     job1: {
-      title: 'Senior Developer',
-      company: 'TechCorp',
-      period: '2020 - Present',
-      description: 'Leading development of enterprise applications, mentoring junior developers, and implementing modern architecture patterns.',
-      highlights: ['Led team of 5 developers', 'Reduced load times by 40%', 'Implemented CI/CD pipeline']
+      title: 'General Manager & Team Leadership',
+      company: 'BitStream, TE',
+      period: '2018 - Present',
+      description: 'Leading BitStream system integrations, conducting needs assessments, and designing secure integration protocols.',
+      highlights: [
+        'Achieved 15% higher KPI targets than industry benchmarks',
+        'Mentored and promoted 4 team members to leadership roles',
+        'Reduced operational errors by 20% through secure integration protocols',
+        'Ensured seamless data flow between legacy and new systems'
+      ]
     },
     job2: {
-      title: 'Full Stack Developer',
-      company: 'InnovateSoft',
-      period: '2017 - 2020',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and SQL/NoSQL databases.',
-      highlights: ['Built 12+ client projects', 'Integrated payment systems', 'Optimized legacy codebase']
+      title: 'Technical Project Manager',
+      company: 'TE Group',
+      period: '2011 - 2018',
+      description: 'Oversaw the successful implementation of the Bitstream project by coordinating cross-functional teams and managing timelines and budgets.',
+      highlights: [
+        'Managed ISP access to TE-owned MSANs',
+        'Generated $2 million in additional revenue within the first year',
+        'Coordinated cross-functional teams'
+      ]
     },
     job3: {
-      title: 'Frontend Developer',
-      company: 'DesignFirst',
-      period: '2015 - 2017',
-      description: 'Transformed design mockups into responsive, accessible web interfaces with focus on user experience.',
-      highlights: ['Created responsive designs', 'Implemented accessibility standards', 'Worked closely with UI/UX team']
+      title: 'Crisis Management Planner',
+      company: 'TE Group',
+      period: '2011 - 2014',
+      description: 'Established the region\'s first Crisis Management Center by developing comprehensive crisis response protocols.',
+      highlights: [
+        'Trained staff on emergency procedures',
+        'Implemented real-time monitoring systems',
+        'Achieved 99.9% uptime record for TE networks'
+      ]
+    },
+    job4: {
+      title: 'CTO and Board Member',
+      company: 'AZHA Group',
+      period: '2012 - 2018',
+      description: 'Managed and grew a successful IT training and consulting center by developing and executing strategic plans.',
+      highlights: [
+        'Increased client base by 50%',
+        'Achieved 20% revenue growth year-over-year',
+        'Optimized financial management practices'
+      ]
     },
   },
   skills: {
     title: 'Skills & Expertise',
     subtitle: 'What I bring to the table',
-    frontend: {
-      title: 'Frontend',
-      skills: ['React', 'Vue', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Framer Motion']
+    programming: {
+      title: 'Programming',
+      skills: ['Python', 'C#', 'C++', '.NET Core', 'Django', 'Flask', 'ASP.NET']
     },
-    backend: {
-      title: 'Backend',
-      skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'GraphQL', 'REST APIs']
+    database: {
+      title: 'Database',
+      skills: ['SQL Server', 'MySQL', 'SQLite', 'PostgreSQL', 'Database Design', 'Data Modeling']
     },
-    design: {
-      title: 'Design',
-      skills: ['Figma', 'Adobe XD', 'UI/UX', 'Responsive Design', 'Animation', 'Typography']
+    networking: {
+      title: 'Networking',
+      skills: ['Cisco', 'Juniper', 'CCNA', 'CCNP', 'JNCIA', 'TDM', 'MSANs', 'Network Architecture']
     },
-    tools: {
-      title: 'Tools & Others',
-      skills: ['Git', 'Docker', 'CI/CD', 'AWS', 'Vercel', 'Performance Optimization']
+    leadership: {
+      title: 'Leadership',
+      skills: ['Team Leadership', 'Project Management', 'Crisis Management', 'Business Continuity', 'Mentoring', 'Strategic Planning']
     }
   },
   projects: {
@@ -64,60 +88,72 @@ export default {
     subtitle: 'A showcase of my best work',
     viewAll: 'View All Projects',
     project1: {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping platform with product management, user accounts, and payment processing.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
+      title: 'Nokia Flow-One',
+      description: 'Led the deployment of a cloud-based OSS/Activation platform, cutting operational costs by 15% and boosting service response times by 40%.',
+      technologies: ['Cloud Architecture', 'Network Provisioning', 'Automation', 'OSS/BSS'],
       viewProject: 'View Project',
-      viewCode: 'View Code'
+      viewCode: 'View Details'
     },
     project2: {
-      title: 'Health & Fitness App',
-      description: 'Mobile-first application for tracking workouts, nutrition, and personal health goals with data visualization.',
-      technologies: ['React Native', 'Firebase', 'Chart.js', 'REST API'],
+      title: 'VC4 Inventory Management System',
+      description: 'Designed and deployed an inventory structure based on eTOM/ITIL standards, streamlining asset tracking and improving network maintenance efficiency.',
+      technologies: ['eTOM', 'ITIL', 'Inventory Management', 'Asset Tracking'],
       viewProject: 'View Project',
-      viewCode: 'View Code'
+      viewCode: 'View Details'
     },
     project3: {
-      title: 'AI Content Generator',
-      description: 'Web application leveraging AI for generating blog posts, social media content, and marketing copy.',
-      technologies: ['Vue.js', 'Python', 'OpenAI API', 'PostgreSQL'],
+      title: 'Unified Network Management System',
+      description: 'In-house platform designed and developed with a team of 5 developers, improving network performance by 10% and centralizing monitoring for enhanced operational visibility.',
+      technologies: ['C#', 'Python', 'SOAP/WCF', 'Java', 'Xamarin'],
       viewProject: 'View Project',
-      viewCode: 'View Code'
+      viewCode: 'View Details'
+    },
+    project4: {
+      title: 'Business Management Systems',
+      description: 'Developed systems for data collection from billing systems, warehouse transaction monitoring, and ticketing with integrated phonebook and SMS gateway.',
+      technologies: ['C#', 'SQL Server', 'Revenue Assurance', 'Inventory Control'],
+      viewProject: 'View Project',
+      viewCode: 'View Details'
     },
   },
   about: {
     title: 'About Me',
     subtitle: 'The person behind the code',
-    bio: "I am a passionate developer with over 5 years of experience building digital products. I specialize in creating intuitive, accessible, and performant web applications that solve real-world problems. My journey in tech began when I built my first website at the age of 15, and I've been hooked ever since.",
+    bio: "Seasoned IT and Network Engineering leader with over 18 years of experience in driving innovation, business continuity, and crisis management across large-scale, mission-critical projects. I hold a B.Sc. in Electronics and Electrical Telecommunication Engineering from Cairo University. My expertise spans leading cross-functional teams, managing enterprise-level network infrastructures, and implementing cloud-based and automated solutions that reduce operational costs by up to 20%.",
     values: {
       title: 'My Values',
       value1: {
-        title: 'Quality First',
-        description: 'I believe in creating solutions that not only work well but are also maintainable, scalable, and stand the test of time.'
+        title: 'Technical Excellence',
+        description: 'I believe in creating solutions that not only work well but are also maintainable, scalable, and stand the test of time, focusing on both immediate needs and long-term sustainability.'
       },
       value2: {
-        title: 'Continuous Learning',
-        description: 'The tech landscape evolves rapidly. I commit to staying updated with the latest technologies and best practices.'
+        title: 'Leadership & Mentorship',
+        description: 'I am committed to developing talent and building high-performing teams through mentorship, knowledge sharing, and creating opportunities for growth and advancement.'
       },
       value3: {
-        title: 'User-Centered',
-        description: 'The end user is always at the center of my design and development process.'
+        title: 'Innovation & Resilience',
+        description: 'I approach challenges with creativity and determination, finding innovative solutions to complex problems while ensuring systems remain resilient under pressure.'
       }
     }
   },
   contact: {
     title: 'Get In Touch',
-    subtitle: "Let's bring your ideas to life",
+    subtitle: "Let's collaborate on your next project",
     nameLabel: 'Full Name',
     emailLabel: 'Email Address',
     messageLabel: 'Your Message',
     sendButton: 'Send Message',
     success: 'Your message has been sent successfully!',
-    error: 'There was an error sending your message. Please try again.'
+    error: 'There was an error sending your message. Please try again.',
+    email: 'EngZiada@gmail.com',
+    phone: '+20-1026655008',
+    location: 'Cairo, Egypt',
+    availability: 'Available for consulting and leadership roles'
   },
   footer: {
-    copyright: '© 2025 All Rights Reserved.',
+    copyright: '© 2025 Muhammad Ziada. All Rights Reserved.',
     designed: 'Designed and built with passion',
-    followMe: 'Follow me on:',
+    followMe: 'Connect with me on:',
+    linkedin: 'http://www.linkedin.com/in/muhammadziada/'
   }
 };
